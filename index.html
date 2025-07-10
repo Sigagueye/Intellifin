@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Financial Optimization Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="static/css/intellifin.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" /></svg>
+            </div>
+            <h1>IntelliFin</h1>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link active" data-page="hub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5,2H13.5V5H10.5V2M4.75,3.37L6.16,4.78L4.04,6.9L2.63,5.5L4.75,3.37M17.84,4.78L19.25,3.37L21.37,5.5L19.96,6.9L17.84,4.78M2,10.5V13.5H5V10.5H2M22,10.5V13.5H19V10.5H22M10.5,19H13.5V22H10.5V19M4.04,17.1L6.16,19.22L4.75,20.63L2.63,18.5L4.04,17.1M19.25,20.63L17.84,19.22L19.96,17.1L21.37,18.5L19.25,20.63M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7Z" /></svg>
+                    <span>Optimization Hub</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-page="phase2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" /></svg>
+                    <span>Predictive Platform</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-page="phase3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z" /></svg>
+                    <span>Simulation Ecosystem</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-page="phase4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11.5,4A1.5,1.5 0 0,1 13,5.5A1.5,1.5 0 0,1 11.5,7A1.5,1.5 0 0,1 10,5.5A1.5,1.5 0 0,1 11.5,4M11,18H10V10H11V18M14,18H13V12H14V18Z" /></svg>
+                    <span>Competitive Analysis</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-page="phase5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2C17.5,2 22,6.5 22,12C22,17.5 17.5,22 12,22C6.5,22 2,17.5 2,12C2,6.5 6.5,2 12,2M11,19.9C15.4,19.4 19,15.8 19,11.5C19,11.3 19,11.1 19,11C16.5,11.6 14.1,10.7 12.8,8.8C11.5,7 11.9,4.7 13.4,3.1C13,3.1 12.6,3 12.2,3C8.2,3 4.9,5.8 4.2,9.4C6.6,10 8.9,11.3 10.2,13.2C11.5,15 11.1,17.3 9.6,18.9C10.2,19.3 10.6,19.6 11,19.9Z" /></svg>
+                    <span>Global Expansion</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-page="beta">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M12,14C14.67,14 17,11.67 17,9C17,8.73 16.95,8.5 16.86,8.28C16.54,9.9 15.3,11.26 13.58,11.65C13.06,12.72 12.06,13.5 10.91,13.73C11.23,13.9 11.6,14 12,14M9,16C9,17.66 7.66,19 6,19C4.34,19 3,17.66 3,16C3,14.73 3.73,13.62 4.8,13.18C4.53,13.75 4.5,14.37 4.74,15C5.17,16.25 6.4,17 7.75,16.8C8.5,16.65 9,16 9,16M15,16C15,16 15.5,16.65 16.25,16.8C17.6,17 18.83,16.25 19.26,15C19.5,14.37 19.47,13.75 19.2,13.18C20.27,13.62 21,14.73 21,16C21,17.66 19.66,19 18,19C16.34,19 15,17.66 15,16Z" /></svg>
+                    <span>Beta Program</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-page="data">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14,16H10V13H14V16M16,11H8V18H16V11M20,19.59V4.41C20,3.63 19.37,3 18.59,3H5.41C4.63,3 4,3.63 4,4.41V19.59C4,20.37 4.63,21 5.41,21H18.59C19.37,21 20,20.37 20,19.59Z" /></svg>
+                    <span>Data & API</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="sidebar-nav">
+            </ul>
+
+        <div class="sidebar-footer">
+            <p>
+                This is a <strong>Beta Version</strong> available to few selected startups. It is powered by ongoing research in financial modeling by <strong>Siga Ndeye</strong>. Your feedback is invaluable for improving this platform.
+            </p>
+            <div class="footer-links">
+                <a href="mailto:feedback@intellifin-demo.com?subject=IntelliFin Beta Feedback" class="footer-link">Provide Feedback</a>
+                <a href="#" class="footer-link" onclick="alert('The research paper is currently pending publication. Please check back later!')">Access Research</a>
+            </div>
+            
+            <button class="logout-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"></path>
+                </svg>
+                <span>Logout</span>
+            </button>
+        </div>
+    </nav>
+    </nav>
+
+    <main class="main-content">
+        <header class="main-header">
+            <h2 id="page-title">Optimization Hub</h2>
+        </header>
+        <div class="content-area">
+            
+            <div id="hub" class="page-content active">
+                <div class="dashboard-grid dashboard-grid-3-cols">
+                    <div class="grid-item-col-span-2">
+                        <div class="panel">
+                            <h3 class="section-header">Genetic Algorithm: ROI Optimization Path</h3>
+                            <div class="chart-container"><canvas id="geneticAlgoChart"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="grid-item-col-span-1">
+                    <div class="panel">
+                        <h3 class="section-header">Top Strategic Insights</h3>
+                        <ul class="recommendation-list">
+                            <li class="recommendation-item">
+                                <div class="rec-icon impact">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                                </div>
+                                <div class="rec-content"><p><strong>High-Impact Action:</strong> Increase budget for 'Search Ads' by 12%.</p></div>
+                            </li>
+                            <li class="recommendation-item">
+                                <div class="rec-icon efficiency">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg>
+                                </div>
+                                <div class="rec-content"><p><strong>Efficiency Alert:</strong> 'Social Media' CAC is 15% higher than benchmark.</p></div>
+                            </li>
+                            <li class="recommendation-item">
+                                <div class="rec-icon opportunity">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.91 4.51c.32-.23.67-.42 1.05-.57m2.08-.34a8.966 8.966 0 013.86 1.14M12 21a8.966 8.966 0 01-7.86-5.59" /></svg>
+                                </div>
+                                <div class="rec-content"><p><strong>New Opportunity:</strong> Low SOV in video content vs. Competitor B.</p></div>
+                            </li>
+                            <li class="recommendation-item">
+                                <div class="rec-icon risk">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+                                </div>
+                                <div class="rec-content"><p><strong>Risk Mitigation:</strong> Budget concentration in 'Search Ads' exceeds 70%. Diversify spend.</p></div>
+                            </li>
+                            <li class="recommendation-item">
+                                <div class="rec-icon growth">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-.625m3.75.625l-6.25 3.75" /></svg>
+                                </div>
+                                <div class="rec-content"><p><strong>Growth Opportunity:</strong> 'APAC-3' market shows high engagement. Consider pilot campaign.</p></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    <div class="grid-item-col-span-1">
+                        <div class="panel">
+                            <h3 class="section-header">Channel Performance</h3>
+                            <div class="chart-container"><canvas id="mcdmRadarChart"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="grid-item-col-span-1">
+                        <div class="panel">
+                            <h3 class="section-header">Budget Reallocation</h3>
+                            <div class="chart-container"><canvas id="reallocationDonutChart"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="grid-item-col-span-1">
+                        <div class="panel">
+                            <h3 class="section-header">MCDM TOPSIS Analysis</h3>
+                            <div class="chart-container"><canvas id="topsisBubbleChart"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hub" class="page-content active">
+                <div class="grid-item-col-span-3">
+                    <div class="panel">
+                        <h3 class="section-header">AI-Driven Decision Matrix</h3>
+                        <div class="chart-container" style="height: 400px;"><canvas id="decisionMatrixChart"></canvas></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="phase2" class="page-content">
+                <div class="dashboard-grid dashboard-grid-3-cols">
+                    <div class="panel controls-panel grid-item-col-span-1">
+                        <h3 class="section-header">Predictive Controls</h3>
+                        <p class="data-description">Adjust the marketing mix to see the AI's real-time predictions.</p>
+                        <div class="control-group">
+                            <label>Search Ads Spend: <span id="searchAdsSpendValue" class="value-display">$50k</span></label>
+                            <input type="range" id="searchAdsSpend" min="0" max="100" value="50" oninput="updatePrediction()">
+                        </div>
+                        <div class="control-group">
+                            <label>Social Media Spend: <span id="socialMediaSpendValue" class="value-display">$30k</span></label>
+                            <input type="range" id="socialMediaSpend" min="0" max="100" value="30" oninput="updatePrediction()">
+                        </div>
+                        <div class="control-group">
+                            <label>Content Marketing Spend: <span id="contentMarketingSpendValue" class="value-display">$20k</span></label>
+                            <input type="range" id="contentMarketingSpend" min="0" max="100" value="20" oninput="updatePrediction()">
+                        </div>
+                    </div>
+                    <div class="panel grid-item-col-span-1">
+                        <h3 class="section-header">Predicted Conversions</h3>
+                        <div class="info-metric"><div id="predictedConversionsValue" class="value">0</div><div class="label">Total Conversions</div></div>
+                    </div>
+                    <div class="panel grid-item-col-span-1">
+                         <h3 class="section-header">Predicted CAC</h3>
+                        <div class="info-metric"><div id="predictedCACValue" class="value">$0</div><div class="label">Cost Per Acquisition</div></div>
+                    </div>
+
+                    <div class="panel grid-item-col-span-3">
+                        <h3 class="section-header">Predicted ROI by Channel</h3>
+                        <div class="chart-container"><canvas id="roiByChannelChart"></canvas></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="phase3" class="page-content">
+                <div class="interactive-layout">
+                    <div class="panel controls-panel">
+                        <h3 class="section-header">'What-If' Simulation</h3>
+                        <p class="data-description">Select a strategy and adjust market risk to simulate financial impact.</p>
+                        <div class="control-group">
+                            <h4>Strategic Model</h4>
+                            <div class="strategy-buttons" id="strategyButtons"><button class="styled-button selected" onclick="runSimulation('Aggressive', this)">Aggressive Growth</button><button class="styled-button" onclick="runSimulation('Balanced', this)">Balanced ROI</button><button class="styled-button" onclick="runSimulation('Conservative', this)">Cost-Control</button></div>
+                        </div>
+                        <div class="control-group">
+                            <label>Market Volatility: <span id="marketVolatilityValue" class="value-display">25%</span></label>
+                            <input type="range" id="marketVolatility" min="0" max="100" value="25" oninput="runSimulation()">
+                        </div>
+                    </div>
+                    <div class="results-layout-vertical">
+                        <div class="panel"><h3 class="section-header">Simulated ROI Projection</h3><div class="chart-container"><canvas id="simulationChart"></canvas></div></div>
+                        <div class="grid-2-col">
+                            <div class="panel"><h3 class="section-header">Strategy Budget Mix</h3><div class="chart-container"><canvas id="strategyMixChart"></canvas></div></div>
+                            <div class="panel"><h3 class="section-header">Success Probability</h3><div class="chart-container"><canvas id="successProbChart"></canvas></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="phase4" class="page-content">
+                <div class="dashboard-grid dashboard-grid-2-cols">
+                    <div class="panel controls-panel grid-item-col-span-1">
+                        <h3 class="section-header">Competitive Simulation</h3>
+                        <p class="data-description">Adjust budgets to see the effect on market share.</p>
+                        <div class="control-group"><label>Our Budget ($M): <span id="ourBudgetValue" class="value-display">5</span></label><input type="range" id="ourBudget" min="1" max="10" value="5" oninput="updateMarketShare()"></div>
+                        <div class="control-group"><label>Competitor A ($M): <span id="compABudgetValue" class="value-display">4</span></label><input type="range" id="compABudget" min="1" max="10" value="4" oninput="updateMarketShare()"></div>
+                        <div class="control-group"><label>Competitor B ($M): <span id="compBBudgetValue" class="value-display">3</span></label><input type="range" id="compBBudget" min="1" max="10" value="3" oninput="updateMarketShare()"></div>
+                    </div>
+                    <div class="panel grid-item-col-span-1">
+                        <h3 class="section-header">Share of Voice (SOV)</h3>
+                        <div class="chart-container"><canvas id="sovChart"></canvas></div>
+                    </div>
+
+                    <div class="panel grid-item-col-span-2">
+                         <h3 class="section-header">Projected Market Share</h3>
+                         <div class="chart-container"><canvas id="marketShareChart"></canvas></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="phase5" class="page-content">
+                <div class="interactive-layout">
+                    <div class="panel controls-panel">
+                        <h3 class="section-header">Target Regions</h3>
+                        <p class="data-description">Select regions to model potential ROI and risk.</p>
+                        <div class="control-group">
+                            <div class="region-selector" id="regionSelector"><button class="styled-button selected" onclick="toggleRegion('Europe', this)">Europe</button><button class="styled-button" onclick="toggleRegion('Asia-Pacific', this)">Asia-Pacific</button><button class="styled-button" onclick="toggleRegion('Latin America', this)">Latin America</button><button class="styled-button" onclick="toggleRegion('MENA', this)">MENA</button></div>
+                        </div>
+                        <div class="control-group">
+                            <label>Geopolitical Risk Factor: <span id="geoRiskValue" class="value-display">30%</span></label>
+                            <input type="range" id="geoRisk" min="0" max="100" value="30" oninput="modelExpansion()">
+                        </div>
+                    </div>
+                    <div class="results-layout-vertical">
+                        <div class="panel">
+                            <h3 class="section-header">Projected ROI by Region</h3>
+                            <div class="chart-container"><canvas id="regionRoiChart"></canvas></div>
+                        </div>
+                         <div class="panel info-panel">
+                            <h3 class="section-header">Expansion Summary</h3>
+                            <div class="grid-2-col">
+                                <div class="info-metric"><div id="totalInvestmentValue" class="value">$0M</div><div class="label">Total Investment</div></div>
+                                <div class="info-metric"><div id="totalMarketValue" class="value">0</div><div class="label">Potential Market (M)</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="beta" class="page-content">
+                <div class="grid-2-col">
+                    <div class="panel"><h3 class="section-header">Tester Status Overview</h3><div class="chart-container"><canvas id="betaStatusChart"></canvas></div></div>
+                    <div class="panel"><h3 class="section-header">Feature Engagement</h3><div class="chart-container"><canvas id="betaFeatureChart"></canvas></div></div>
+                </div>
+                <div class="panel">
+                    <h3 class="section-header">Beta Tester Monitoring</h3>
+                    <div class="beta-table-container">
+                        <table class="beta-table" id="betaTesterTable">
+                            <thead><tr><th>Tester</th><th>Company</th><th>Status</th><th>Last Active</th><th>Engagement</th><th>Features Tested</th><th>Latest Feedback</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="data" class="page-content">
+                <div class="grid-2-col">
+                    <div class="panel data-panel">
+                        <h3 class="section-header">Upload Data File</h3>
+                        <p class="data-description">Upload a CSV file with your historical marketing data. Ensure it adheres to the required schema.</p>
+                        <div class="control-group"><input type="file" id="dataFileUpload" accept=".csv"></div>
+                        <button class="styled-button action-button" onclick="processUpload()">Process Uploaded Data</button>
+                        <div class="panel-subsection">
+                            <h4 class="subsection-header">Required Data Schema</h4>
+                             <table class="data-schema-table">
+                                <thead><tr><th>Column</th><th>Type</th><th>Example</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Date</td><td>YYYY-MM-DD</td><td>2025-07-06</td></tr>
+                                    <tr><td>Channel</td><td>String</td><td>Search Ads</td></tr>
+                                    <tr><td>Spend</td><td>Number</td><td>550.75</td></tr>
+                                    <tr><td>Clicks</td><td>Integer</td><td>1204</td></tr>
+                                    <tr><td>Conversions</td><td>Integer</td><td>85</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                         <div class="panel-subsection">
+                            <h4 class="subsection-header">Upload History</h4>
+                             <ul class="upload-history">
+                                <li><span>q2_marketing_data.csv</span><span class="status-badge active">Processed</span></li>
+                                <li><span>q1_social_spend.csv</span><span class="status-badge completed">Archived</span></li>
+                             </ul>
+                        </div>
+                    </div>
+                    <div class="panel data-panel">
+                        <h3 class="section-header">API Integration</h3>
+                        <div class="api-status">
+                            <span class="status-indicator"></span>
+                            <span>API Status: <strong>Connected</strong></span>
+                            <span class="last-synced">Last synced: <strong id="last-synced">...</strong></span>
+                        </div>
+                         <div class="panel-subsection">
+                            <h4 class="subsection-header">Your API Key</h4>
+                            <input type="text" id="apiKey" value="ff-4ab1-a8e9-de12-8d7c4a01b2c3" readonly>
+                        </div>
+                        <div class="panel-subsection">
+                            <h4 class="subsection-header">Example Code</h4>
+                            <div class="api-tabs">
+                                <button class="tab-button active" data-lang="curl">cURL</button>
+                                <button class="tab-button" data-lang="python">Python</button>
+                                <button class="tab-button" data-lang="nodejs">Node.js</button>
+                            </div>
+                            <div class="code-block active" data-lang="curl">curl -X POST https://api.intellifin.com/v1/data \
+-H "Authorization: Bearer [Your API Key]" \
+-H "Content-Type: application/json" \
+-d '[{"Date":"2025-07-06",...}]'</div>
+                            <div class="code-block" data-lang="python">import requests
+headers = {"Authorization": "Bearer [API_KEY]"}
+data = [{"Date":"2025-07-06",...}]
+r = requests.post(url, json=data, headers=headers)</div>
+                            <div class="code-block" data-lang="nodejs">const axios = require('axios');
+const headers = { "Authorization": "Bearer [API_KEY]" };
+const data = [{"Date":"2025-07-06",...}];
+axios.post(url, data, { headers });</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <script>
+        // --- GLOBALS & CHART INSTANCES ---
+let predictionCharts = {}, simulationCharts = {}, marketShareCharts = {}, expansionCharts = {}, betaCharts = {};
+let currentStrategy = 'Aggressive';
+let selectedRegions = ['Europe'];
+
+// --- FAKE DATA ---
+const betaTesters = [
+    { name: 'Amelia Chen', company: 'Innovate Inc.', status: 'Active', lastActive: '2025-07-05', engagement: 95, features: ['Simulations', 'Predictions'], feedback: 'The simulation tool is powerful for scenario planning.' },
+    { name: 'Ben Carter', company: 'DataDriven Co.', status: 'Active', lastActive: '2025-07-06', engagement: 88, features: ['API', 'Data Upload'], feedback: 'API integration was seamless. Good documentation.' },
+    { name: 'Chloe Davis', company: 'Momentum LLC', status: 'Idle', lastActive: '2025-06-28', engagement: 40, features: ['Hub'], feedback: 'The main hub is a bit cluttered.' },
+    { name: 'David Rodriguez', company: 'Growth Partners', status: 'Active', lastActive: '2025-07-04', engagement: 92, features: ['Expansion', 'Competitive'], feedback: 'Global expansion model is very insightful.' },
+    { name: 'Emily White', company: 'MarketMinds', status: 'Completed', lastActive: '2025-07-01', engagement: 100, features: ['All'], feedback: 'Excellent platform, provided my full feedback via email.' },
+    { name: 'Frank Miller', company: 'NextGen Ads', status: 'Active', lastActive: '2025-07-05', engagement: 75, features: ['Predictions', 'Hub'], feedback: 'Prediction accuracy is impressive.' },
+    { name: 'Grace Lee', company: 'Catalyst Corp', status: 'Active', lastActive: '2025-07-06', engagement: 85, features: ['Simulations', 'Competitive'], feedback: 'Competitive analysis helps frame our budget talks.' },
+    { name: 'Henry Wilson', company: 'Visionary VC', status: 'Idle', lastActive: '2025-06-25', engagement: 30, features: ['Hub'], feedback: 'Need to spend more time to evaluate.' },
+    { name: 'Isabella Garcia', company: 'QuantumLeap', status: 'Active', lastActive: '2025-07-03', engagement: 90, features: ['API', 'Simulations'], feedback: 'The combination of simulation and real data is key.' },
+    { name: 'Jack Taylor', company: 'Solutions.io', status: 'Active', lastActive: '2025-07-05', engagement: 82, features: ['Data Upload', 'Predictions'], feedback: 'CSV upload parser works well with different formats.' },
+    { name: 'Katherine Brown', company: 'Apex Digital', status: 'Active', lastActive: '2025-07-06', engagement: 98, features: ['Competitive', 'Hub'], feedback: 'TOPSIS chart is a brilliant way to rank channels.' },
+    { name: 'Liam Martinez', company: 'Synergy Systems', status: 'Active', lastActive: '2025-07-02', engagement: 70, features: ['Expansion'], feedback: 'Risk adjustment on the expansion model is crucial.' },
+    { name: 'Mia Anderson', company: 'Alpha Analytics', status: 'Completed', lastActive: '2025-07-02', engagement: 100, features: ['All'], feedback: 'Ready for production. Great work.' },
+    { name: 'Noah Thompson', company: 'Beta Testers United', status: 'Active', lastActive: '2025-07-04', engagement: 80, features: ['Simulations'], feedback: 'What-if scenarios are easy to configure.' },
+    { name: 'Olivia Harris', company: 'Fintech Futures', status: 'Active', lastActive: '2025-07-06', engagement: 93, features: ['Hub', 'API'], feedback: 'The genetic algorithm visualization is fascinating.' },
+    { name: 'Peter Clark', company: 'Capital Ventures', status: 'Idle', lastActive: '2025-06-29', engagement: 55, features: ['Expansion'], feedback: 'How is geopolitical risk quantified?' },
+    { name: 'Quinn Lewis', company: 'UserFirst', status: 'Active', lastActive: '2025-07-05', engagement: 89, features: ['Predictions', 'UI/UX'], feedback: 'The UI is very intuitive and clean.' },
+    { name: 'Ryan Walker', company: 'AdTech Today', status: 'Active', lastActive: '2025-07-03', engagement: 78, features: ['Competitive'], feedback: 'Market share simulation is a great tool for strategy.' },
+    { name: 'Sophia Hall', company: 'Evolve Marketing', status: 'Active', lastActive: '2025-07-06', engagement: 96, features: ['Simulations', 'Expansion'], feedback: 'Would love to see these modules combined.' },
+    { name: 'Thomas Allen', company: 'Greenfield Capital', status: 'Active', lastActive: '2025-07-04', engagement: 84, features: ['API', 'Data Upload'], feedback: 'Data pipeline seems robust.' },
+];
+
+// --- CORE LOGIC ---
+window.onload = () => {
+    setupNavigation();
+    initHubCharts();
+    initPredictionCharts();
+    initSimulationCharts();
+    initMarketShareCharts();
+    initExpansionCharts();
+    initBetaProgram();
+    updateApiStatus();
+};
+
+function setupNavigation() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pageId = link.getAttribute('data-page');
+            if (link.classList.contains('active')) return;
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            document.getElementById('page-title').textContent = link.querySelector('span').textContent;
+        });
+    });
+}
+
+function processUpload() {
+    const fileInput = document.getElementById('dataFileUpload');
+    if (fileInput.files.length > 0) {
+        alert(`Processing file: ${fileInput.files[0].name}. This is a demo feature.`);
+    } else {
+        alert('Please select a file to upload first.');
+    }
+}
+
+function updateApiStatus() {
+    const now = new Date();
+    document.getElementById('last-synced').textContent = now.toLocaleTimeString();
+}
+
+// Function to get CSS Variable values for use in JS
+const getCssVariable = (variable) => getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+
+// Global Chart.js options that use our CSS variables
+const globalChartOptions = (extraOptions = {}) => ({
+    responsive: true,
+    maintainAspectRatio: false,
+    
+    // Default interaction mode for tooltips and hover events
+    interaction: {
+        intersect: false,
+        mode: 'index',
+    },
+
+    // Default animation configuration
+    animation: {
+        duration: 800,
+        easing: 'easeInOutQuart',
+    },
+
+    // Default layout padding
+    layout: {
+        padding: {
+            top: 10,
+            right: 10,
+            bottom: 5,
+            left: 5
+        }
+    },
+
+    // Default styling for chart elements
+    elements: {
+        line: {
+            tension: 0.4 // Creates smoother, curved lines
+        },
+        bar: {
+            borderRadius: 4, // Adds rounded corners to bars
+            borderSkipped: false,
+        },
+        arc: {
+            borderWidth: 2 // Default border for pie/doughnut segments
+        }
+    },
+
+    plugins: {
+        // Default legend configuration
+        legend: {
+            position: 'top',
+            labels: {
+                color: getCssVariable('--text-secondary'),
+                font: { family: getCssVariable('--font-body'), size: 12 },
+                boxWidth: 15,
+                padding: 20
+            }
+        },
+        // Default tooltip configuration
+        tooltip: {
+            enabled: true,
+            backgroundColor: getCssVariable('--text-primary'),
+            titleColor: getCssVariable('--bg-secondary'),
+            bodyColor: getCssVariable('--border-color'),
+            titleFont: { size: 14, weight: 'bold', family: getCssVariable('--font-heading') },
+            bodyFont: { size: 12, family: getCssVariable('--font-body') },
+            padding: 12,
+            cornerRadius: 8,
+            boxPadding: 4,
+            displayColors: true
+        },
+        // Default title configuration (disabled by default, can be enabled per chart)
+        title: {
+            display: false,
+            text: 'Default Chart Title',
+            color: getCssVariable('--text-primary'),
+            font: { size: 18, family: getCssVariable('--font-heading') },
+            padding: { top: 5, bottom: 20 }
+        },
+        // Default configuration for the 'chartjs-plugin-datalabels'
+        // NOTE: This requires adding the plugin script to your HTML
+        datalabels: {
+            display: false, // Disabled globally, enable per chart/dataset
+            color: '#ffffff',
+            font: {
+                weight: 'bold',
+                size: 12
+            },
+            formatter: (value) => {
+                // Example formatter: if value is a number, format it
+                if (typeof value === 'number') {
+                    return value > 1000 ? `${(value / 1000).toFixed(1)}k` : value;
+                }
+                return value;
+            }
+        }
+    },
+    scales: {
+        y: {
+            ticks: { 
+                color: getCssVariable('--text-secondary'),
+                font: { family: getCssVariable('--font-body') }
+             },
+            grid: {
+                color: getCssVariable('--border-color-soft'),
+                drawBorder: false,
+            }
+        },
+        x: {
+            ticks: { 
+                color: getCssVariable('--text-secondary'),
+                font: { family: getCssVariable('--font-body') }
+            },
+            grid: {
+                color: 'transparent', // Often hide the X-axis grid lines for a cleaner look
+                drawBorder: false,
+            }
+        }
+    },
+    // Spread extra options to allow for per-chart overrides
+    ...extraOptions
+});
+
+// --- CHART INITIALIZATION FUNCTIONS ---
+
+function showLoadingOverlay(chartInstance, text = "Running AI Model...") {
+    const chartArea = chartInstance.canvas.parentNode;
+    let overlay = chartArea.querySelector('.chart-loading-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'chart-loading-overlay';
+        chartArea.appendChild(overlay);
+    }
+    overlay.textContent = text;
+    overlay.style.display = 'flex';
+}
+
+function hideLoadingOverlay(chartInstance) {
+    const overlay = chartInstance.canvas.parentNode.querySelector('.chart-loading-overlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+    }
+}
+
+
+function initHubCharts() {
+    // --- Genetic Algorithm Chart with "Live" Evolution ---
+    const geneticAlgoCanvas = document.getElementById('geneticAlgoChart');
+    const initialData = { best: [3.1], avg: [2.5] };
+    const fullData = {
+        best: [3.1, 3.8, 4.5, 5.1, 5.6, 5.9, 6.2],
+        avg: [2.5, 3.0, 3.5, 4.0, 4.4, 4.7, 4.9]
+    };
+    const geneticAlgoChart = new Chart(geneticAlgoCanvas, {
+        type: 'line',
+        data: {
+            labels: ['Gen 1', 'Gen 5', 'Gen 10', 'Gen 15', 'Gen 20', 'Gen 25', 'Gen 30'],
+            datasets: [{
+                label: 'Best Strategy ROI',
+                data: initialData.best,
+                borderColor: getCssVariable('--accent-primary'),
+                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                fill: true,
+                pointBackgroundColor: getCssVariable('--accent-primary'),
+                pointBorderColor: getCssVariable('--bg-secondary'),
+                pointBorderWidth: 2,
+                pointHoverRadius: 6
+            }, {
+                label: 'Average Strategy ROI',
+                data: initialData.avg,
+                borderColor: getCssVariable('--color-teal'),
+                backgroundColor: 'rgba(20, 184, 166, 0.1)',
+                fill: true,
+            }]
+        },
+        options: globalChartOptions({
+            scales: { y: { title: { display: true, text: 'Projected ROI (%)', color: getCssVariable('--text-secondary')} } }
+        })
+    });
+
+    // Simulate the algorithm "evolving"
+    let evolutionStep = 1;
+    const evolutionInterval = setInterval(() => {
+        if (evolutionStep < fullData.best.length) {
+            geneticAlgoChart.data.datasets[0].data.push(fullData.best[evolutionStep]);
+            geneticAlgoChart.data.datasets[1].data.push(fullData.avg[evolutionStep]);
+            geneticAlgoChart.update('quiet');
+            evolutionStep++;
+        } else {
+            clearInterval(evolutionInterval);
+        }
+    }, 700);
+
+
+    // --- Radar Chart ---
+    const mcdmRadarChart = new Chart(document.getElementById('mcdmRadarChart'), {
+        type: 'radar',
+        data: {
+            labels: ['Cost', 'Engagement', 'CTR', 'Conversion', 'Risk'],
+            datasets: [{
+                label: 'Search Ads',
+                data: [85, 75, 80, 90, 60],
+                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                borderColor: getCssVariable('--accent-primary'),
+                pointBackgroundColor: getCssVariable('--accent-primary')
+            }, {
+                label: 'Social Media',
+                data: [70, 90, 85, 70, 75],
+                backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                borderColor: getCssVariable('--color-red'),
+                pointBackgroundColor: getCssVariable('--color-red')
+            }]
+        },
+        options: globalChartOptions({
+            scales: { r: { beginAtZero: true, max: 100, pointLabels: { color: getCssVariable('--text-secondary'), font: {size: 12} }, ticks: { backdropColor: 'transparent', color: getCssVariable('--text-secondary') }, grid: { color: getCssVariable('--border-color-soft') } } }
+        })
+    });
+
+    // --- Interactive Recommendations ---
+    document.querySelectorAll('.recommendation-item').forEach((item, index) => {
+        item.addEventListener('click', () => {
+            const chart = mcdmRadarChart;
+            const originalColors = chart.data.datasets.map(ds => ds.backgroundColor);
+            chart.data.datasets[index].backgroundColor = 'rgba(251, 191, 36, 0.5)';
+            chart.update();
+            setTimeout(() => {
+                chart.data.datasets[index].backgroundColor = originalColors[index];
+                chart.update();
+            }, 1500);
+        });
+    });
+
+
+    // --- Doughnut Chart ---
+    new Chart(document.getElementById('reallocationDonutChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Search Ads', 'Content', 'Social', 'Email'],
+            datasets: [{
+                data: [40, 25, 25, 10],
+                backgroundColor: [getCssVariable('--accent-primary'), getCssVariable('--color-teal'), getCssVariable('--color-purple'), getCssVariable('--color-orange')],
+                borderColor: getCssVariable('--bg-secondary')
+            }]
+        },
+        options: globalChartOptions({ cutout: '65%', plugins: { datalabels: { display: true, color: '#fff', formatter: (value) => `${value}%` } } })
+    });
+
+    // --- TOPSIS Bubble Chart ---
+    new Chart(document.getElementById('topsisBubbleChart'), {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                label: 'Search Ads',
+                data: [{ x: 20, y: 90, r: 15 }],
+                backgroundColor: 'rgba(59, 130, 246, 0.7)'
+            }, {
+                label: 'Social Media',
+                data: [{ x: 35, y: 75, r: 25 }],
+                backgroundColor: 'rgba(239, 68, 68, 0.7)'
+            }, {
+                label: 'Content Marketing',
+                data: [{ x: 50, y: 85, r: 10 }],
+                backgroundColor: 'rgba(20, 184, 166, 0.7)'
+            }]
+        },
+        options: globalChartOptions({
+            scales: {
+                x: { title: { display: true, text: 'Relative Cost', color: getCssVariable('--text-secondary') } },
+                y: { title: { display: true, text: 'Impact Score', color: getCssVariable('--text-secondary') } }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.dataset.label}: (Cost: ${context.raw.x}, Impact: ${context.raw.y}, Budget: ${context.raw.r}%)`;
+                        }
+                    }
+                }
+            }
+        })
+    });
+    
+    // --- NEW: AI-Driven Decision Matrix Chart ---
+    new Chart(document.getElementById('decisionMatrixChart'), {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                label: 'Marketing',
+                data: [
+                    { x: 15000, y: 350, r: 92, decision: 'Reallocate Social Media Budget' },
+                    { x: 50000, y: 550, r: 85, decision: 'Launch Influencer Campaign' },
+                    { x: 25000, y: 200, r: 78, decision: 'Optimize Ad Creatives (A/B Test)' }
+                ],
+                backgroundColor: 'rgba(59, 130, 246, 0.7)'
+            }, {
+                label: 'Sales',
+                data: [
+                    { x: 75000, y: 800, r: 88, decision: 'Implement Dynamic Pricing Model' },
+                    { x: 40000, y: 650, r: 95, decision: 'Introduce Tiered Subscription' }
+                ],
+                backgroundColor: 'rgba(239, 68, 68, 0.7)'
+            }, {
+                label: 'Operations',
+                data: [
+                    { x: 120000, y: 150, r: 98, decision: 'Automate Customer Support Flow' },
+                    { x: 85000, y: 50, r: 82, decision: 'Optimize Supply Chain Logistics' }
+                ],
+                backgroundColor: 'rgba(16, 185, 129, 0.7)'
+            }]
+        },
+        
+        options: globalChartOptions({
+            scales: {
+                x: {
+                    title: { display: true, text: 'Projected Annual Cost Savings ($)' },
+                    ticks: { callback: (value) => `$${value/1000}k` }
+                },
+                y: {
+                    title: { display: true, text: 'Projected New Leads / Conversions' },
+                    grace: '10%'
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                    align: 'end'
+                },
+                tooltip: {
+                    callbacks: {
+                        title: (context) => context[0].raw.decision,
+                        label: (context) => [
+                            `Category: ${context.dataset.label}`,
+                            `Cost Savings: $${context.raw.x.toLocaleString()}`,
+                            `New Leads: ${context.raw.y}`,
+                            `Confidence: ${context.raw.r}%`
+                        ]
+                    }
+                }
+            }
+        })
+    });
+}
+
+function initPredictionCharts() {
+    predictionCharts.roi = new Chart(document.getElementById('roiByChannelChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Search Ads', 'Social Media', 'Content Marketing'],
+            datasets: [{
+                label: 'Predicted ROI',
+                data: [],
+                backgroundColor: [getCssVariable('--color-green'), getCssVariable('--accent-primary'), getCssVariable('--color-purple')]
+            }]
+        },
+        options: globalChartOptions({
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: { x: { beginAtZero: true } }
+        })
+    });
+    updatePrediction();
+}
+
+function initSimulationCharts() {
+    simulationCharts.projection = new Chart(document.getElementById('simulationChart'), { type: 'line', data: { labels: ['Q1', 'Q2', 'Q3', 'Q4'], datasets: [] }, options: globalChartOptions({ scales: { y: { title: { display: true, text: 'Simulated ROI', color: getCssVariable('--text-secondary') } } } }) });
+    simulationCharts.mix = new Chart(document.getElementById('strategyMixChart'), { type: 'pie', data: { labels: ['Search', 'Social', 'Content'], datasets: [{ data: [], backgroundColor: [getCssVariable('--color-green'), getCssVariable('--accent-primary'), getCssVariable('--color-purple')] }] }, options: globalChartOptions({ plugins: { legend: { position: 'right' } } }) });
+    simulationCharts.prob = new Chart(document.getElementById('successProbChart'), { type: 'bar', data: { labels: ['Probability'], datasets: [{ data: [], backgroundColor: [getCssVariable('--color-green')] }] }, options: globalChartOptions({ indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { max: 100, ticks: { display: false } }, y: { grid: { display: false } } } }) });
+    runSimulation('Aggressive', document.querySelector('.strategy-buttons .styled-button'));
+}
+
+function initMarketShareCharts() {
+    marketShareCharts.share = new Chart(document.getElementById('marketShareChart'), { type: 'bar', data: { labels: ['Market Share'], datasets: [{ label: 'Our Company', data: [], backgroundColor: getCssVariable('--accent-primary') }, { label: 'Competitor A', data: [], backgroundColor: getCssVariable('--color-red') }, { label: 'Competitor B', data: [], backgroundColor: getCssVariable('--color-orange') }] }, options: globalChartOptions({ indexAxis: 'y', scales: { x: { stacked: true, max: 100, title: { display: true, text: '%', color: getCssVariable('--text-secondary') }, grid: { display: false } }, y: { stacked: true, grid: { display: false } } }, }) });
+    marketShareCharts.sov = new Chart(document.getElementById('sovChart'), { type: 'doughnut', data: { labels: ['Our Company', 'Competitor A', 'Competitor B'], datasets: [{ data: [], backgroundColor: [getCssVariable('--accent-primary'), getCssVariable('--color-red'), getCssVariable('--color-orange')], borderColor: getCssVariable('--bg-secondary'), borderWidth: 4 }] }, options: globalChartOptions({ cutout: '60%' }) });
+    updateMarketShare();
+}
+
+function initExpansionCharts() {
+    expansionCharts.roi = new Chart(document.getElementById('regionRoiChart'), {
+        type: 'bar',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Projected ROI (%)',
+                data: [],
+                backgroundColor: getCssVariable('--accent-primary')
+            }, {
+                label: 'Risk-Adjusted ROI (%)',
+                data: [],
+                backgroundColor: getCssVariable('--color-red')
+            }]
+        },
+        options: globalChartOptions({
+            scales: { y: { beginAtZero: true } },
+            plugins: { tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.formattedValue}%` } } }
+        })
+    });
+    modelExpansion();
+}
+
+// --- INTERACTIVE LOGIC FUNCTIONS ---
+
+// Holds timer to prevent rapid, overlapping updates
+let predictionTimer;
+function updatePrediction() {
+    clearTimeout(predictionTimer);
+
+    // Set loading state
+    const conversionsMetric = document.getElementById('predictedConversionsValue').parentNode;
+    const cacMetric = document.getElementById('predictedCACValue').parentNode;
+    conversionsMetric.classList.add('kpi-calculating');
+    cacMetric.classList.add('kpi-calculating');
+    document.getElementById('predictedConversionsValue').textContent = '...';
+    document.getElementById('predictedCACValue').textContent = '...';
+
+    // Simulate calculation delay
+    predictionTimer = setTimeout(() => {
+        const s = parseInt(document.getElementById('searchAdsSpend').value);
+        const m = parseInt(document.getElementById('socialMediaSpend').value);
+        const c = parseInt(document.getElementById('contentMarketingSpend').value);
+        document.getElementById('searchAdsSpendValue').textContent = `$${s}k`;
+        document.getElementById('socialMediaSpendValue').textContent = `$${m}k`;
+        document.getElementById('contentMarketingSpendValue').textContent = `$${c}k`;
+        const totalSpend = (s + m + c) || 1;
+        const conversions = (s * 1.8) + (m * 1.2) + (c * 1.5);
+        const cac = (totalSpend * 1000) / (conversions || 1);
+        
+        // Update UI with results
+        conversionsMetric.classList.remove('kpi-calculating');
+        cacMetric.classList.remove('kpi-calculating');
+        document.getElementById('predictedConversionsValue').textContent = conversions.toFixed(0);
+        document.getElementById('predictedCACValue').textContent = `$${cac.toFixed(2)}`;
+        predictionCharts.roi.data.datasets[0].data = [(s * 4.5), (m * 3.2), (c * 3.8)];
+        predictionCharts.roi.update();
+    }, 500);
+}
+
+
+let simulationTimer;
+function runSimulation(strategy = null, element = null) {
+    clearTimeout(simulationTimer);
+    showLoadingOverlay(simulationCharts.projection, 'Running Monte Carlo Simulation...');
+
+    simulationTimer = setTimeout(() => {
+        if (strategy) {
+            currentStrategy = strategy;
+            document.querySelectorAll('#strategyButtons .styled-button').forEach(b => b.classList.remove('selected'));
+            if(element) element.classList.add('selected');
+        }
+        const volatility = parseInt(document.getElementById('marketVolatility').value);
+        document.getElementById('marketVolatilityValue').textContent = `${volatility}%`;
+        const scenarios = {
+            Aggressive: { base: [6, 7, 8, 9], riskFactor: 0.2, mix: [50, 30, 20] },
+            Balanced: { base: [4, 4.5, 5, 5.5], riskFactor: 0.1, mix: [35, 35, 30] },
+            Conservative:{ base: [3, 3.2, 3.4, 3.6], riskFactor: 0.05, mix: [20, 30, 50] }
+        };
+        const s = scenarios[currentStrategy];
+        const risk = volatility / 100;
+        const riskAdjustedData = s.base.map(p => p * (1 - (risk * s.riskFactor * 10)));
+        
+        simulationCharts.projection.data.datasets = [
+            { label: 'Projected ROI', data: s.base, borderColor: getCssVariable('--accent-primary'), borderWidth: 3, pointBackgroundColor: getCssVariable('--accent-primary') },
+            { label: 'Risk-Adjusted Projection', data: riskAdjustedData, borderColor: getCssVariable('--color-red'), borderWidth: 2, borderDash: [5, 5], pointBackgroundColor: getCssVariable('--color-red')}
+        ];
+        simulationCharts.projection.update();
+        hideLoadingOverlay(simulationCharts.projection);
+
+        simulationCharts.mix.data.datasets[0].data = s.mix;
+        simulationCharts.mix.update();
+        
+        simulationCharts.prob.data.datasets[0].data = [Math.max(0, 95 - (volatility * 0.5) - (s.riskFactor * 100) )];
+        simulationCharts.prob.update();
+    }, 800);
+}
+
+let marketShareTimer;
+function updateMarketShare() {
+    clearTimeout(marketShareTimer);
+    showLoadingOverlay(marketShareCharts.share, "Recalibrating Game Theory Model...");
+    
+    marketShareTimer = setTimeout(() => {
+        const our = parseInt(document.getElementById('ourBudget').value);
+        const a = parseInt(document.getElementById('compABudget').value);
+        const b = parseInt(document.getElementById('compBBudget').value);
+        document.getElementById('ourBudgetValue').textContent = `${our}`;
+        document.getElementById('compABudgetValue').textContent = `${a}`;
+        document.getElementById('compBBudgetValue').textContent = `${b}`;
+        const total = our + a + b;
+        marketShareCharts.share.data.datasets[0].data = [(our / total * 100)];
+        marketShareCharts.share.data.datasets[1].data = [(a / total * 100)];
+        marketShareCharts.share.data.datasets[2].data = [(b / total * 100)];
+        marketShareCharts.share.update();
+        hideLoadingOverlay(marketShareCharts.share);
+    
+        marketShareCharts.sov.data.datasets[0].data = [our, a, b];
+        marketShareCharts.sov.update();
+    }, 600);
+}
+
+function toggleRegion(region, element) {
+    const index = selectedRegions.indexOf(region);
+    if (index > -1 && selectedRegions.length > 1) {
+        selectedRegions.splice(index, 1);
+        element.classList.remove('selected');
+    } else if (index === -1) {
+        selectedRegions.push(region);
+        element.classList.add('selected');
+    }
+    modelExpansion();
+}
+
+let expansionTimer;
+function modelExpansion() {
+    clearTimeout(expansionTimer);
+    showLoadingOverlay(expansionCharts.roi, "Modeling Regional Risk Factors...");
+
+    expansionTimer = setTimeout(() => {
+        const geoRisk = parseInt(document.getElementById('geoRisk').value) / 100;
+        document.getElementById('geoRiskValue').textContent = `${(geoRisk * 100).toFixed(0)}%`;
+        const regionData = {
+            'Europe': { roi: 5.5, risk: 0.1, invest: 2.0, market: 740 },
+            'Asia-Pacific': { roi: 8.0, risk: 0.3, invest: 3.5, market: 4300 },
+            'Latin America': { roi: 7.0, risk: 0.4, invest: 1.5, market: 650 },
+            'MENA': { roi: 6.5, risk: 0.5, invest: 1.8, market: 450 }
+        };
+        const labels = [], rois = [], adjustedRois = [];
+        let totalInvest = 0, totalMarket = 0;
+        
+        selectedRegions.sort().forEach(r => {
+            const d = regionData[r];
+            labels.push(r);
+            rois.push(d.roi);
+            adjustedRois.push(d.roi * (1 - (d.risk * geoRisk)));
+            totalInvest += d.invest;
+            totalMarket += d.market;
+        });
+        
+        expansionCharts.roi.data.labels = labels;
+        expansionCharts.roi.data.datasets[0].data = rois;
+        expansionCharts.roi.data.datasets[1].data = adjustedRois;
+        expansionCharts.roi.update();
+        hideLoadingOverlay(expansionCharts.roi);
+        
+        document.getElementById('totalInvestmentValue').textContent = `$${totalInvest.toFixed(1)}M`;
+        document.getElementById('totalMarketValue').textContent = `${totalMarket.toFixed(0)}M`;
+    }, 700);
+}
+
+// (The Beta Program functions remain the same as they are not interactive simulations)
+function initBetaProgram() {
+    renderBetaTesters();
+    initBetaCharts();
+}
+
+function renderBetaTesters() {
+    const tableBody = document.querySelector('#betaTesterTable tbody');
+    if (!tableBody) return;
+    let tableHTML = '';
+    betaTesters.forEach(tester => {
+        tableHTML += `
+            <tr>
+                <td>
+                    <div class="redacted-text">${tester.name}</div>
+                    <div style="font-size:0.85em; color:var(--text-secondary);">${tester.company}</div>
+                </td>
+                <td><span class="status-badge ${tester.status.toLowerCase()}">${tester.status}</span></td>
+                <td>${tester.lastActive}</td>
+                <td>
+                    <div class="engagement-bar">
+                        <div style="width: ${tester.engagement}%;"></div>
+                    </div>
+                </td>
+                <td>${tester.features.map(f => `<span class="feature-tag">${f}</span>`).join('')}</td>
+                <td style="max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${tester.feedback}">${tester.feedback}</td>
+            </tr>
+        `;
+    });
+    tableBody.innerHTML = tableHTML;
+}
+
+function initBetaCharts() {
+    const statusCounts = betaTesters.reduce((acc, t) => {
+        acc[t.status] = (acc[t.status] || 0) + 1;
+        return acc;
+    }, {});
+    betaCharts.status = new Chart(document.getElementById('betaStatusChart'), {
+        type: 'doughnut',
+        data: {
+            labels: Object.keys(statusCounts),
+            datasets: [{
+                data: Object.values(statusCounts),
+                backgroundColor: [getCssVariable('--color-green'), getCssVariable('--color-yellow'), getCssVariable('--accent-primary')],
+                borderColor: getCssVariable('--bg-secondary'),
+                borderWidth: 4,
+            }]
+        },
+        options: globalChartOptions({ cutout: '65%' })
+    });
+
+    const featureCounts = betaTesters.flatMap(t => t.features).reduce((acc, f) => {
+        acc[f] = (acc[f] || 0) + 1;
+        return acc;
+    }, {});
+
+    betaCharts.features = new Chart(document.getElementById('betaFeatureChart'), {
+        type: 'bar',
+        data: {
+            labels: Object.keys(featureCounts),
+            datasets: [{
+                label: 'Times Tested',
+                data: Object.values(featureCounts),
+                backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                borderColor: getCssVariable('--accent-primary'),
+                borderWidth: 2
+            }]
+        },
+        options: globalChartOptions({ indexAxis: 'y', plugins: { legend: { display: false } } })
+    });
+}
+    </script>
+</body>
+</html>
