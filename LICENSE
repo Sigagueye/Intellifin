@@ -2,20 +2,54 @@ MIT License
 
 Copyright (c) 2025 Sigagueye
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## IntelliFin Dashboard - End-User License Agreement (EULA)
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Effective Date: June 23, 2024
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This End-User License Agreement ("EULA") is a legal agreement between you ("You" or "Licensee") and Siga Ndeye ("Licensor"), the author and owner of the software application "IntelliFin Dashboard" and its associated documentation (collectively, the "Software").
+
+By accessing, installing, or using the Software, you agree to be bound by the terms of this EULA. If you do not agree to these terms, do not access or use the Software.
+
+1. Grant of License
+
+Subject to the terms and conditions of this EULA, Licensor hereby grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to use the Software solely for your internal evaluation and testing purposes as a beta user.
+
+2. Beta Version & Disclaimer of Warranties
+
+You acknowledge that the Software is a beta version and is provided on an "AS IS" and "AS AVAILABLE" basis. It has not been commercially released and may contain bugs, errors, and other problems that could cause system failures or data loss.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSOR EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS, OPERATE WITHOUT INTERRUPTION, OR BE ERROR-FREE. ANY RELIANCE ON THE OUTPUT, RECOMMENDATIONS, OR DATA PROVIDED BY THE SOFTWARE IS SOLELY AT YOUR OWN RISK.
+
+3. Restrictions on Use
+
+You shall not, and shall not permit any third party to:
+a. Copy, modify, or create derivative works of the Software, in whole or in part.
+b. Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code for the Software.
+c. Rent, lease, lend, sell, sublicense, assign, distribute, publish, transfer, or otherwise make the Software available to any third party.
+d. Remove, delete, alter, or obscure any trademarks or any copyright, patent, or other intellectual property or proprietary rights notices from the Software.
+e. Use the Software for any commercial purpose or for any purpose other than the evaluation and testing expressly permitted by this EULA.
+f. Use the Software in any manner or for any purpose that infringes, misappropriates, or otherwise violates any right of any person, or that violates any applicable law.
+
+4. Intellectual Property
+
+You acknowledge that the Software, including its underlying source code, algorithms, research, and documentation, is the sole and exclusive property of the Licensor. The Licensor reserves all rights, title, and interest in and to the Software, including all intellectual property rights therein. This EULA does not grant you any ownership interest in the Software.
+
+5. Feedback
+
+As a beta user, you are encouraged to provide feedback, comments, and suggestions for the improvement of the Software ("Feedback"). You agree that the Licensor shall have a royalty-free, worldwide, transferable, perpetual, irrevocable right to use, copy, modify, and otherwise exploit such Feedback for any purpose without any obligation to you.
+
+6. Limitation of Liability
+
+TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL THE LICENSOR BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION, OR FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+7. Termination
+
+This EULA is effective until terminated. Your rights under this license will terminate automatically without notice from the Licensor if you fail to comply with any term(s) of this EULA. Upon termination, you shall cease all use of the Software and destroy all copies, full or partial, of the Software.
+
+8. Governing Law
+
+This EULA shall be governed by and construed in accordance with the laws of the State of Oregon, United States, without regard to its conflict of law principles.
+
+9. Entire Agreement
+
+This EULA constitutes the entire agreement between you and the Licensor concerning the Software and supersedes all prior or contemporaneous understandings and agreements, whether written or oral.
