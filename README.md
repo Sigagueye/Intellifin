@@ -26,19 +26,33 @@
 The project follows a modern structure, separating source code from distribution files.
 
 /intellifin-dashboard
+
 ├── dist/                # Production build output
+
 ├── src/                 # Source code
+
 │   ├── assets/
+
 │   ├── css/
+
 │   ├── js/
+
 │   │   ├── api.js
+
 │   │   └── main.js
+
 │   └── index.html
+
 ├── .gitignore
+
 ├── EULA.md              # Your End-User License Agreement
+
 ├── index.html           # Root redirect to src (for some hosts)
+
 ├── package.json
+
 ├── vite.config.js
+
 └── README.md
 
 
